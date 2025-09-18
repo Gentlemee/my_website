@@ -53,7 +53,7 @@
 
     /* Hero Section */
     header {
-      background: linear-gradient(rgba(46, 125, 50, 0.8), rgba(46, 125, 50, 0.8)), url('hero-bg.jpg') no-repeat center/cover;
+      background: linear-gradient(rgba(46, 125, 50, 0.8), rgba(46, 125, 50, 0.8)), url('img/hero-bg.jpg') no-repeat center/cover;
       color: white;
       text-align: center;
       padding: 90px 20px;
@@ -80,7 +80,6 @@
       background: #ffffff;
       border-radius: 15px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      flex-wrap: wrap;
     }
     #about img {
       width: 260px;
@@ -89,11 +88,9 @@
       border-radius: 50%;
       border: 5px solid #2e7d32;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      margin: auto;
     }
     #about-text {
       flex: 1;
-      min-width: 250px;
     }
     #about h2 {
       color: #2e7d32;
@@ -166,8 +163,18 @@
       right: 20px;
       display: flex;
       flex-direction: column;
-      gap: 15px;
+      align-items: center;
+      gap: 10px;
       z-index: 2000;
+    }
+    .contact-title {
+      background: #fff;
+      padding: 6px 10px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #333;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
     }
     .contact-buttons a {
       display: flex;
@@ -188,6 +195,30 @@
     }
     .contact-buttons a:hover {
       transform: scale(1.1);
+    }
+
+    /* Tooltip effect */
+    .contact-buttons a[title] {
+      position: relative;
+    }
+    .contact-buttons a[title]::after {
+      content: attr(title);
+      position: absolute;
+      bottom: 60px;
+      background: #333;
+      color: #fff;
+      font-size: 12px;
+      padding: 4px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+      opacity: 0;
+      transform: translateY(5px);
+      transition: all 0.3s ease;
+      pointer-events: none;
+    }
+    .contact-buttons a:hover::after {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     /* Responsive Design */
@@ -236,7 +267,7 @@
 
   <!-- About Section -->
   <section id="about">
-    <img src="im133.jpg" alt="My Photo">
+    <img src="img/im133.jpg" alt="My Photo">
     <div id="about-text">
       <h2>About Me</h2>
       <p>
@@ -264,8 +295,9 @@
 
   <!-- Floating Contact Buttons -->
   <div class="contact-buttons">
-    <a href="https://wa.me/2349134955820" target="_blank"><i class="fab fa-whatsapp"></i></a>
-    <a href="mailto:ochanyafaith24@gmail.com" class="email"><i class="fas fa-envelope"></i></a>
+    <div class="contact-title">💌 Get in touch with me</div>
+    <a href="https://wa.me/2349134955820" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <a href="mailto:ochanyafaith24@gmail.com" class="email" title="Email"><i class="fas fa-envelope"></i></a>
   </div>
 
   <!-- Footer -->
