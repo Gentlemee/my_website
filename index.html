@@ -163,18 +163,8 @@
       right: 20px;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      gap: 10px;
+      gap: 15px;
       z-index: 2000;
-    }
-    .contact-title {
-      background: #fff;
-      padding: 6px 10px;
-      border-radius: 8px;
-      font-size: 14px;
-      font-weight: bold;
-      color: #333;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
     }
     .contact-buttons a {
       display: flex;
@@ -195,30 +185,6 @@
     }
     .contact-buttons a:hover {
       transform: scale(1.1);
-    }
-
-    /* Tooltip effect */
-    .contact-buttons a[title] {
-      position: relative;
-    }
-    .contact-buttons a[title]::after {
-      content: attr(title);
-      position: absolute;
-      bottom: 60px;
-      background: #333;
-      color: #fff;
-      font-size: 12px;
-      padding: 4px 8px;
-      border-radius: 4px;
-      white-space: nowrap;
-      opacity: 0;
-      transform: translateY(5px);
-      transition: all 0.3s ease;
-      pointer-events: none;
-    }
-    .contact-buttons a:hover::after {
-      opacity: 1;
-      transform: translateY(0);
     }
 
     /* Responsive Design */
@@ -267,7 +233,7 @@
 
   <!-- About Section -->
   <section id="about">
-    <img src="im133.jpg" alt="My Photo">
+    <img src="img/im133.jpg" alt="My Photo">
     <div id="about-text">
       <h2>About Me</h2>
       <p>
@@ -295,9 +261,8 @@
 
   <!-- Floating Contact Buttons -->
   <div class="contact-buttons">
-    <div class="contact-title">💌 Get in touch with me</div>
-    <a href="https://wa.me/2349134955820" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-    <a href="mailto:ochanyafaith24@gmail.com" class="email" title="Email"><i class="fas fa-envelope"></i></a>
+    <a href="https://wa.me/2349134955820" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="mailto:ochanyafaith24@gmail.com" class="email"><i class="fas fa-envelope"></i></a>
   </div>
 
   <!-- Footer -->
@@ -309,4 +274,3 @@
   </footer>
 </body>
 </html>
-
